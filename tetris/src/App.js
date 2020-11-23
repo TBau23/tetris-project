@@ -3,6 +3,8 @@ import './App.css';
 
 import GridSquare from './components/GridSquare';
 import GridBoard from './components/GridBoard';
+import NextBlock from './components/NextBlock';
+import ScoreBoard from './components/ScoreBoard'
 
 
 function App() {
@@ -12,7 +14,8 @@ function App() {
         <h2>Welcome to Tetris</h2>
       </header>
       <GridBoard />
-      
+      <NextBlock />
+      <ScoreBoard />
     </div>
   );
 }
