@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import GridSquare from './components/GridSquare';
+import GridBoard from './components/GridBoard';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <header className="App-header">
         <h2>Welcome to Tetris</h2>
       </header>
-      <GridSquare color="1" />
+      <GridBoard />
       
     </div>
   );
