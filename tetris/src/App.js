@@ -1,9 +1,17 @@
+import React from 'react';
 import './App.css';
+
+import GridSquare from './components/GridSquare';
+
 
 function App() {
   return (
     <div className="App">
-      <h2>Welcome to Tetris</h2>
+      <header className="App-header">
+        <h2>Welcome to Tetris</h2>
+      </header>
+      <GridSquare color="1" />
+      
     </div>
   );
 }
