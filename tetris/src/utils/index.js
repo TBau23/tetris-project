@@ -155,6 +155,7 @@ export const defaultState = () => {
         // set x position of shape to 5 and y to -4, which puts the shape in center of grid, above the top
         x: 5,
         y: -4,
+        
         nextShape: randomShape(),
         // tell the game that it's currently running
         isRunning: true,

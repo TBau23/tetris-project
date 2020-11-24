@@ -1,11 +1,14 @@
 import React from 'react';
+import { useSelector } from 'react-redux'
+import { shapes } from '../utils'
+
 import GridSquare from './GridSquare';
 
 // Draws the next block view, showing the next block that will drop
 
 function NextBlock(props) {
-
-    const box = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+    const nextShape = useSelector((state) => state.game.nextShape)
+    const box = shapes[nextShape][0]
     // Map to grid
     const grid = box.map((rowArr, row) => {
         return rowArr.map((square, col) => {
