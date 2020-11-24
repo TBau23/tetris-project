@@ -79,6 +79,7 @@ export const shapes = [
         [0,1,1,0],
         [0,0,0,0]]
     ],
+
     // J block
     [
         [[1,0,0,0],
@@ -136,3 +137,34 @@ export const shapes = [
     ]
 
 ]
+
+// Random Shape Selector
+export const randomShape = () => {
+    return random(1, shapes.length - 1) // start with 1 because 0 index shape is blank
+}
+
+// Return default state for game
+export const defaultState = () => {
+    return {
+        // create empty grid
+        grid: gridDefault(),
+        // get a new random shape
+        shape: randomShape(),
+        // set rotation of that shape to 0
+        rotation: 0, // index within shapes array
+        // set x position of shape to 5 and y to -4, which puts the shape in center of grid, above the top
+        x: 5,
+        y: -4,
+        nextShape: randomShape(),
+        // tell the game that it's currently running
+        isRunning: true,
+        // set score to 0
+        score: 0,
+        // set the default speed
+        speed: 1000,
+        // game isn't over yet
+        gameOver: false
+
+
+    }
+}
